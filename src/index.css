@@ -74,13 +74,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter dark;
+    @apply bg-background text-foreground font-inter;
     background: radial-gradient(ellipse at top, hsl(240 3.7% 15.9%) 0%, hsl(240 10% 3.9%) 100%);
     min-height: 100vh;
-  }
-
-  html {
-    @apply dark;
   }
 }
 
