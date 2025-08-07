@@ -7,6 +7,7 @@ import { serviceOrderAPI } from '@/services/api';
 import { ServiceOrderCard } from '@/components/ServiceOrderCard';
 import { ServiceOrderForm } from '@/components/ServiceOrderForm';
 import { ServiceOrderDetails } from '@/components/ServiceOrderDetails';
+import { UserProfile } from '@/components/UserProfile';
 import { Dashboard } from '@/components/Dashboard';
 import { useToast } from '@/hooks/use-toast';
 import { Plus, Search, Filter, BarChart3, FileText } from 'lucide-react';
@@ -265,7 +266,8 @@ const Index = () => {
         <div className="glass-card p-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold gradient-text">ServiceFlow</h1>
-            <div className="flex gap-2">
+            <div className="flex items-center gap-4">
+              <div className="flex gap-2">
               <Button
                 variant={viewMode === 'dashboard' ? 'default' : 'outline'}
                 size="sm"
@@ -284,6 +286,8 @@ const Index = () => {
                 <FileText className="h-4 w-4 mr-2" />
                 Ordens
               </Button>
+              </div>
+              <UserProfile />
             </div>
           </div>
         </div>
