@@ -123,9 +123,9 @@ class ServiceOrderAPI {
 
 export const serviceOrderAPI = new ServiceOrderAPI();
 
-// Configuração do axios para futuras integrações reais
+// Configuração do axios para API local
 export const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'http://localhost:3000/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
@@ -135,6 +135,10 @@ export const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     // Adicionar token de auth quando necessário
+    const token = localStorage.getItem('auth_token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => {

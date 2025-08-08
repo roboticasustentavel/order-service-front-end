@@ -25,8 +25,8 @@ export function UserProfile() {
   }
 
   const getUserInitials = () => {
-    if (user?.user_metadata?.full_name) {
-      return user.user_metadata.full_name
+    if (user?.full_name) {
+      return user.full_name
         .split(' ')
         .map(name => name[0])
         .join('')
@@ -51,7 +51,7 @@ export function UserProfile() {
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">
-              {user?.user_metadata?.full_name || 'Usuário'}
+              {user?.full_name || 'Usuário'}
             </p>
             <p className="text-xs leading-none text-muted-foreground">
               {user?.email}
