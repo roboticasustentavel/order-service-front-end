@@ -13,7 +13,7 @@ export interface AuthResponse {
 
 export const authAPI = {
   async signIn(email: string, password: string): Promise<AuthResponse> {
-    const response = await api.post('/auth/login', { email, password });
+    const response = await api.post('/login', { email, password });
     return response.data;
   },
 
