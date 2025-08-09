@@ -38,7 +38,7 @@ export function LoginForm({ onToggleMode }: LoginFormProps) {
     } else {
       toast({
         title: "Login realizado com sucesso!",
-        description: "Bem-vindo ao ServiceFlow."
+        description: "Bem-vindo ao O.S Digital."
       })
     }
 

@@ -265,7 +265,7 @@ const Index = () => {
       <div className="max-w-7xl mx-auto mb-8">
         <div className="glass-card p-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold gradient-text">ServiceFlow</h1>
+            <h1 className="text-2xl font-bold gradient-text">O.S Digital</h1>
             <div className="flex items-center gap-4">
               <div className="flex gap-2">
               <Button
