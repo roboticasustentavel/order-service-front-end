@@ -11,7 +11,8 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 function AppContent() {
-  const { user, loading } = useAuth();
+  const { loading } = useAuth();
+  const token = localStorage.getItem('auth_token');
 
   if (loading) {
     return (
@@ -21,7 +22,7 @@ function AppContent() {
     );
   }
 
-  if (!user) {
+  if (!token) {
     return <Auth />;
   }
 
