@@ -64,10 +64,10 @@ export const serviceOrderAPI = new ServiceOrderAPI();
 
 // Configuração do axios para API local
 export const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: "https://order-service-api-sqhk.onrender.com",
   timeout: 10000,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
